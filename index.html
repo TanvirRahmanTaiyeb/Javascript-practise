@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced JavaScript Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+
+        #output {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced JavaScript Concepts</h1>
+
+    <div id="output">
+        <!-- JavaScript output will be displayed here -->
+    </div>
+
+    <script>
+        // JavaScript String Methods
+        const text = "Welcome to Advanced JavaScript!";
+        const outputDiv = document.getElementById("output");
+
+        // Displaying String Methods
+        outputDiv.innerHTML += "<h2>String Methods</h2>";
+        outputDiv.innerHTML += "<p>Original Text: " + text + "</p>";
+        outputDiv.innerHTML += "<p>Length of text: " + text.length + "</p>";
+        outputDiv.innerHTML += "<p>Uppercase text: " + text.toUpperCase() + "</p>";
+        outputDiv.innerHTML += "<p>Lowercase text: " + text.toLowerCase() + "</p>";
+        outputDiv.innerHTML += "<p>Substring (8-18): " + text.substring(8, 18) + "</p>";
+        outputDiv.innerHTML += "<p>Character at index 5: " + text.charAt(5) + "</p>";
+
+        // JavaScript Number Methods
+        const number = 87.54321;
+
+        // Displaying Number Methods
+        outputDiv.innerHTML += "<h2>Number Methods</h2>";
+        outputDiv.innerHTML += "<p>Original Number: " + number + "</p>";
+        outputDiv.innerHTML += "<p>Rounded to 2 decimals: " + number.toFixed(2) + "</p>";
+        outputDiv.innerHTML += "<p>Exponential notation: " + number.toExponential(3) + "</p>";
+        outputDiv.innerHTML += "<p>Fixed notation (6 digits): " + number.toPrecision(6) + "</p>";
+        outputDiv.innerHTML += "<p>Square root: " + Math.sqrt(number).toFixed(2) + "</p>";
+
+        // JavaScript Array Methods
+        const mixedArray = ["apple", false, "grape", 42, "kiwi", true];
+
+        // Displaying Array Methods
+        outputDiv.innerHTML += "<h2>Array Methods</h2>";
+        outputDiv.innerHTML += "<p>Original Array: " + mixedArray.join(", ") + "</p>";
+        outputDiv.innerHTML += "<p>Index of 'grape': " + mixedArray.indexOf("grape") + "</p>";
+        outputDiv.innerHTML += "<p>Array length: " + mixedArray.length + "</p>";
+        outputDiv.innerHTML += "<p>Last element: " + mixedArray[mixedArray.length - 1] + "</p>";
+        outputDiv.innerHTML += "<p>Sorted Array: " + mixedArray.slice(0).sort().join(", ") + "</p>";
+
+        // JavaScript Date Methods
+        const currentDate = new Date();
+
+        // Displaying Date Methods
+        outputDiv.innerHTML += "<h2>Date Methods</h2>";
+        outputDiv.innerHTML += "<p>Current Date: " + currentDate + "</p>";
+        outputDiv.innerHTML += "<p>Year: " + currentDate.getFullYear() + "</p>";
+        outputDiv.innerHTML += "<p>Month: " + (currentDate.getMonth() + 1) + "</p>";
+        outputDiv.innerHTML += "<p>Day of the week: " + getDayName(currentDate.getDay()) + "</p>";
+        outputDiv.innerHTML += "<p>Formatted Date: " + currentDate.toDateString() + "</p>";
+
+        // JavaScript Function Methods
+        function greet(name) {
+            return "Greetings, " + name + "!";
+        }
+
+        // Displaying Function Methods
+        outputDiv.innerHTML += "<h2>Function Methods</h2>";
+        outputDiv.innerHTML += "<p>Function Result (1): " + greet("Eve") + "</p>";
+        outputDiv.innerHTML += "<p>Function Result (2): " + multiply(10, 5) + "</p>";
+
+        // Helper function to get the name of the day
+        function getDayName(dayIndex) {
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            return days[dayIndex];
+        }
+
+        // Another function method example
+        function multiply(a, b) {
+            return a * b;
+        }
+    </script>
+</body>
+
+</html>
