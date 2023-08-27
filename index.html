@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Advanced JavaScript Concepts</title>
     <style>
+        /* Styling for the page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,6 +12,7 @@
         }
 
         h1 {
+            /* Styling for the heading */
             text-align: center;
             padding: 20px;
             background-color: #333;
@@ -20,6 +21,7 @@
         }
 
         #output {
+            /* Styling for the output container */
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -29,6 +31,7 @@
         }
 
         h2 {
+            /* Styling for subheadings */
             background-color: #333;
             color: white;
             padding: 10px;
@@ -36,11 +39,11 @@
         }
 
         p {
+            /* Styling for paragraphs */
             margin: 10px 0;
         }
     </style>
 </head>
-
 <body>
     <h1>Advanced JavaScript Concepts</h1>
 
@@ -72,6 +75,8 @@
         outputDiv.innerHTML += "<p>Exponential notation: " + number.toExponential(3) + "</p>";
         outputDiv.innerHTML += "<p>Fixed notation (6 digits): " + number.toPrecision(6) + "</p>";
         outputDiv.innerHTML += "<p>Square root: " + Math.sqrt(number).toFixed(2) + "</p>";
+        outputDiv.innerHTML += "<p>Absolute value: " + Math.abs(number) + "</p>"; // Adding Math.abs
+        outputDiv.innerHTML += "<p>Ceiling value: " + Math.ceil(number) + "</p>"; // Adding Math.ceil
 
         // JavaScript Array Methods
         const mixedArray = ["apple", false, "grape", 42, "kiwi", true];
@@ -94,6 +99,7 @@
         outputDiv.innerHTML += "<p>Month: " + (currentDate.getMonth() + 1) + "</p>";
         outputDiv.innerHTML += "<p>Day of the week: " + getDayName(currentDate.getDay()) + "</p>";
         outputDiv.innerHTML += "<p>Formatted Date: " + currentDate.toDateString() + "</p>";
+        outputDiv.innerHTML += "<p>Time: " + currentTime(currentDate) + "</p>"; // Adding currentTime method
 
         // JavaScript Function Methods
         function greet(name) {
@@ -115,7 +121,11 @@
         function multiply(a, b) {
             return a * b;
         }
+
+        // Custom function to get current time
+        function currentTime(date) {
+            return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        }
     </script>
 </body>
-
 </html>
